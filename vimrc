@@ -1,6 +1,7 @@
 " disable Vi compatible for plugins stable work
 set nocompatible
 
+" misc color settings
 set term=xterm-256color
 set t_Co=256
 
