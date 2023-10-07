@@ -52,6 +52,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-sensible'
 Plug 'preservim/NERDTree'
 Plug 'vim-scripts/dbext.vim'
+Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 " for DBEXT plugin: set connections profile
