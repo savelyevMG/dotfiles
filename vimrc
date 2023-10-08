@@ -1,6 +1,16 @@
 " disable Vi compatible for plugins stable work
 set nocompatible
 
+" indent logic from https://habr.com/ru/articles/64224/
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+set smartindent
+
+" highlight all in Python
+let g:python_highlight_all = 1
+
 " misc color settings
 set term=xterm-256color
 set t_Co=256
@@ -31,6 +41,9 @@ set hlsearch
 " lines numeration with ZERO on current line
 set relativenumber
 
+" but current line has it's REAL number
+set nu
+
 " disable arrows
 noremap <Up> <Nop> 
 noremap <Down> <Nop>
@@ -48,12 +61,16 @@ highlight Comment ctermfg=Blue
 
 " vim-plug section
 call plug#begin()
+Plug 'flazz/vim-colorschemes'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-colorscheme-switcher'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-sensible'
 Plug 'preservim/NERDTree'
 Plug 'vim-scripts/dbext.vim'
-Plug 'ycm-core/YouCompleteMe'
 call plug#end()
+
+colorscheme vividchalk 
 
 " for DBEXT plugin: set connections profile
 let g:dbext_default_profile_myPGDB='type=pgsql:host=222.222.222.130:user=m:dsnname=slurmdb:dbname=slurmdb:passwd=m'
